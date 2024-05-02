@@ -1,15 +1,17 @@
 .background {
-  background-color: red;
+  background-color: #202632;
   width: 100vw;
   height: 100vh;
   position: relative;
 }
 
 .content {
-  background-color: blue;
+  background-color: #313a49;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50px;
+  width: 25%;
+  height: 35%;
+  border-radius: 20px;
 }
