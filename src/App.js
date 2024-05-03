@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import dice from "./assets/dice.svg";
+import divider from "./assets/divider.svg";
 
 function App() {
   return (
@@ -10,11 +12,8 @@ function App() {
           It is easy to sit up and take notice, what's difficult is getting up
           and taking action{" "}
         </h4>
-        <div className="beneath">
-          <div className="line"></div>
-          <div className="eleven">11</div>
-          <div className="line"></div>
-        </div>
+        <img src={divider} alt="divider" />
+        <img src={dice} alt="dice" />
       </div>
     </div>
   );
