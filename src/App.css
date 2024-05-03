@@ -41,3 +41,7 @@ h4 {
 .divider {
   margin-top: 10px;
 }
+
+.topic {
+  display: flex;
+}
