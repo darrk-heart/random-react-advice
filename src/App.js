@@ -11,9 +11,9 @@ function App() {
           and taking action{" "}
         </h4>
         <div className="beneath">
-          <div></div>
-          <div>11</div>
-          <div></div>
+          <div className="line"></div>
+          <div className="eleven">11</div>
+          <div className="line"></div>
         </div>
       </div>
     </div>
