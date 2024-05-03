@@ -1,19 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import dice from "./assets/dice.svg";
 import divider from "./assets/divider.svg";
 
 function App() {
+  const [advice, setAdvice] = useState("");
+
+  useEffect(() => {
+    fetchAdvice();
+  }, []);
+
+  const fetchAdvice = () => {
+    fetch("https://api.adviceslip.com/advice")
+      .then((response) => response.json())
+      .then((data) => setAdvice(data.slip.advice))
+      .catch((error) => console.error("Error fetching advice", error));
+  };
+
+  const getAdvice = () => {
+    fetchAdvice();
+  };
+
   return (
     <div className="background">
       <div className="content">
         <p>ADVICE 117</p>
-        <h4>
-          It is easy to sit up and take notice, what's difficult is getting up
-          and taking action{" "}
-        </h4>
-        <img src={divider} alt="divider" />
-        <img src={dice} alt="dice" />
+        {advice && <h4>{advice}</h4>}
+        <img src={divider} alt="divider" className="divider" />
+        <img src={dice} alt="dice" onClick={getAdvice} />
       </div>
     </div>
   );
