@@ -45,3 +45,14 @@ h4 {
 .topic {
   display: flex;
 }
+
+.dice {
+  background-color: rgb(55, 218, 55);
+  padding: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: -13px;
+}

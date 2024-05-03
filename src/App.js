@@ -34,7 +34,7 @@ function App() {
         </div>
         {advice && <h4>{advice}</h4>}
         <img src={divider} alt="divider" className="divider" />
-        <img src={dice} alt="dice" onClick={getAdvice} />
+        <img src={dice} alt="dice" onClick={getAdvice} className="dice" />
       </div>
     </div>
   );
